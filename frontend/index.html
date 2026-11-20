@@ -29,12 +29,12 @@
                         mess with dns
                         <span class="star text-xl">★</span>
                     </a>
-                    <div class="text-normal"> a <a href="https://wizardzines.com">wizard zines</a> project</div>
+                    <div class="text-normal">un proyecto de <a href="https://wizardzines.com">wizard zines</a></div>
                 </h3>
                 <div class="w-full lg:w-0"> </div> <!-- ugly hack to make it wrap ugh ugh -->
                 <div class="mr-4 lg:mb-0 mb-8 font-bold">
-                    <a class="no-underline mx-4" href="/about.html"> About </a>
-                    <a class="no-underline mx-4" href="/dictionary.html">DNS dictionary</a>
+                    <a class="no-underline mx-4" href="/about.html"> Acerca de </a>
+                    <a class="no-underline mx-4" href="/dictionary.html">Diccionario de DNS</a>
                 </div>
             </div>
         </div>
@@ -45,10 +45,10 @@
             <div class="md:w-1/2 lg:w-2/3 w-full mb-16 pr-8 xl:pl-32 xl:pr-16">
                 <div class="flex justify-between align-start">
                     <h1 class="text-xl mb-8" id="subdomain-title">
-                        Your subdomain is: <span class="font-bold text-green-700">{{ domain }}.messwithdns.com</span>
+                        Tu subdominio es: <span class="font-bold text-green-700">{{ domain }}.messwithdns.com</span>
                     </h1>
                     <div>
-                        <button @click="logout" class="px-2 py-2 cursor-pointer underline">Logout</button>
+                        <button @click="logout" class="px-2 py-2 cursor-pointer underline">Cerrar sesión</button>
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
                         </svg>
-                        <span> Add a record </span>
+                        <span> Añadir un registro </span>
                     </h2>
 
                     <div class="border border-gray-200 p-4">
@@ -72,23 +72,23 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z" />
                         </svg>
-                        <span class="mr-1"> All DNS records </span>
+                        <span class="mr-1"> Todos los registros DNS </span>
 
                         <a id="clear-records" class="pr-4 cursor-pointer" @click="clearRecords()">
-                            (clear)
+                            (borrar)
                         </a>
                     </h2>
                     <div v-if="records && records.length > 0">
                         <table class="w-full" id="records">
                             <tr class="hidden lg:table-row bg-gray-100 border border-gray-300">
                                 <th class="text-left px-4 py-2">
-                                    Name
+                                    Nombre
                                 </th>
                                 <th class="text-left">
-                                    Type
+                                    Tipo
                                 </th>
                                 <th class="text-left">
-                                    Content
+                                    Contenido
                                 </th>
                                 <th class="text-left">
                                     TTL
@@ -102,12 +102,12 @@
                     </div>
                     <div v-else-if="records">
                         <p id="no-records-yet">
-                            No records yet! You can add one!
+                            ¡Todavía no hay registros! Puedes añadir uno.
                         </p>
                     </div>
                     <div v-else>
                         <p>
-                            Loading...
+                            Cargando...
                         </p>
                     </div>
                 </div>
@@ -121,22 +121,22 @@
                             Requests
                         </span>
                         <a id="clear-requests" v-if="requests && requests.length > 0" class="pr-4 cursor-pointer" @click="clearRequests()">
-                            (clear)
+                            (borrar)
                         </a>
                     </h2>
                     <p class="my-4">
-                        This is a 
-                        <span v-if="websocketOpen"> live updating </span>
-                        list of all requests for your subdomain's records.
+                        Esta es una lista
+                        <span v-if="websocketOpen"> que se actualiza en tiempo real </span>
+                        de todas las solicitudes de registros de tu subdominio.
 
                     </p>
 
                     <table class="w-full request-table">
                         <thead>
                             <tr class="hidden lg:table-row bg-gray-100 border border-gray-300">
-                                <th class="text-left px-4 py-2"> Time </th>
-                                <th class="text-left"> Request </th>
-                                <th class="text-left"> Response </th>
+                                <th class="text-left px-4 py-2"> Hora </th>
+                                <th class="text-left"> Solicitud </th>
+                                <th class="text-left"> Respuesta </th>
                             </tr>
                         </thead>
 
@@ -150,24 +150,24 @@
         <div id="main" v-else class="bg-white p-8 w-full m-auto flex mt-32" style="max-width: 40em;">
             <div class="m-auto">
                 <h1 class="font-bold text-3xl text-left text-center">
-                    Welcome to mess with dns!
+                    ¡Te damos la bienvenida a mess with dns!
                 </h1>
                 <p class="mt-8 mb-4 text-xl">
-                    It's fun to learn by experimenting and
-                    breaking things!
-                    Here you can do weird DNS experiments
-                    with no consequences if you mess something up.
+                    ¡Es divertido aprender experimentando y
+                    rompiendo cosas!
+                    Aquí puedes hacer experimentos raros con DNS
+                    sin consecuencias si algo sale mal.
                 </p>
                 <p class="mb-4 text-xl">
                 </p>
 
                 <p class="mb-8 text-xl">
-                    Click the button below to get started.
+                    Haz clic en el botón para empezar.
                 </p>
                 <div class="text-center mt-16">
                     <!-- login with github -->
                     <a id="start-experimenting" class="no-underline bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg text-xl" href="/login">
-                        Start experimenting
+                        Empezar a experimentar
                     </a>
                 </div>
             </div>

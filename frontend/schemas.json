@@ -1,7 +1,7 @@
 {
   "A": [
     {
-      "label": "IPv4 Address",
+      "label": "Dirección IPv4",
       "name": "A",
       "type": "text",
       "width": "10rem",
@@ -10,7 +10,7 @@
   ],
   "AAAA": [
     {
-      "label": "IPv6 Address",
+      "label": "Dirección IPv6",
       "name": "AAAA",
       "type": "text",
       "width": "10rem",
@@ -19,21 +19,21 @@
   ],
   "CAA": [
     {
-      "label": "Flag",
+      "label": "Indicador",
       "name": "Flag",
       "type": "number",
       "width": "10rem",
       "example": "1"
     },
     {
-      "label": "Tag",
+      "label": "Etiqueta",
       "name": "Tag",
       "type": "text",
       "width": "10rem",
       "example": "1"
     },
     {
-      "label": "CA domain name",
+      "label": "Nombre de dominio de la CA",
       "name": "Value",
       "type": "text",
       "width": "10rem",
@@ -42,7 +42,7 @@
   ],
   "CNAME": [
     {
-      "label": "Target",
+      "label": "Destino",
       "name": "Target",
       "type": "text",
       "width": "10rem",
@@ -51,14 +51,14 @@
   ],
   "MX": [
     {
-      "label": "Preference",
+      "label": "Preferencia",
       "name": "Preference",
       "type": "number",
       "width": "4rem",
       "example": "10"
     },
     {
-      "label": "Mail Server",
+      "label": "Servidor de correo",
       "name": "Mx",
       "type": "text",
       "width": "12rem",
@@ -67,7 +67,7 @@
   ],
   "NS": [
     {
-      "label": "Nameserver",
+      "label": "Servidor de nombres",
       "name": "Ns",
       "type": "text",
       "width": "10rem",
@@ -76,7 +76,7 @@
   ],
   "PTR": [
     {
-      "label": "Pointer",
+      "label": "Puntero",
       "name": "Ptr",
       "type": "text",
       "width": "10rem",
@@ -85,28 +85,28 @@
   ],
   "SRV": [
     {
-      "label": "Priority",
+      "label": "Prioridad",
       "name": "Priority",
       "type": "number",
       "width": "4rem",
       "example": "10"
     },
     {
-      "label": "Weight",
+      "label": "Peso",
       "name": "Weight",
       "type": "number",
       "width": "4rem",
       "example": "TODO"
     },
     {
-      "label": "Port",
+      "label": "Puerto",
       "name": "Port",
       "type": "number",
       "width": "6rem",
       "example": "8080"
     },
     {
-      "label": "Target",
+      "label": "Destino",
       "name": "Target",
       "type": "text",
       "width": "10rem",
@@ -115,7 +115,7 @@
   ],
   "TXT": [
     {
-      "label": "Content",
+      "label": "Contenido",
       "name": "Txt",
       "type": "text",
       "width": "10rem",
@@ -124,49 +124,49 @@
   ],
   "SOA": [
     {
-      "label": "Primary NS",
+      "label": "NS principal",
       "name": "Mname",
       "type": "text",
       "width": "16rem",
       "example": "ns1.example.com"
     },
     {
-      "label": "Responsible Email",
+      "label": "Correo electrónico del responsable",
       "name": "Rname",
       "type": "text",
       "width": "16rem",
       "example": "admin@example.com"
     },
     {
-      "label": "Serial",
+      "label": "Número de serie",
       "name": "Serial",
       "type": "number",
       "width": "6rem",
       "example": "2024010101"
     },
     {
-      "label": "Refresh",
+      "label": "Actualización",
       "name": "Refresh",
       "type": "number",
       "width": "4rem",
       "example": "3600"
     },
     {
-      "label": "Retry",
+      "label": "Reintento",
       "name": "Retry",
       "type": "number",
       "width": "4rem",
       "example": "600"
     },
     {
-      "label": "Expire",
+      "label": "Caducidad",
       "name": "Expire",
       "type": "number",
       "width": "4rem",
       "example": "604800"
     },
     {
-      "label": "Minimum TTL",
+      "label": "TTL mínimo",
       "name": "Minimum",
       "type": "number",
       "width": "4rem",
@@ -176,21 +176,21 @@
 
   "SVCB": [
     {
-      "label": "Priority",
+      "label": "Prioridad",
       "name": "Priority",
       "type": "number",
       "width": "4rem",
       "example": "10"
     },
     {
-      "label": "Target",
+      "label": "Destino",
       "name": "Target",
       "type": "text",
       "width": "10rem",
       "example": "orange-ip.fly.dev"
     },
     {
-      "label": "Parameters",
+      "label": "Parámetros",
       "name": "Params",
       "optional": true,
       "type": "text",
@@ -200,21 +200,21 @@
   ],
   "HTTPS": [
     {
-      "label": "Priority",
+      "label": "Prioridad",
       "name": "Priority",
       "type": "number",
       "width": "4rem",
       "example": "10"
     },
     {
-      "label": "Target",
+      "label": "Destino",
       "name": "Target",
       "type": "text",
       "width": "10rem",
       "example": "orange-ip.fly.dev"
     },
     {
-      "label": "Parameters",
+      "label": "Parámetros",
       "name": "Params",
       "optional": true,
       "type": "text",

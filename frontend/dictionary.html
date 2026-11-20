@@ -20,12 +20,12 @@
                         mess with dns
                         <span class="star text-xl">★</span>
                     </a>
-                    <div class="text-normal"> a <a href="https://wizardzines.com">wizard zines</a> project</div>
+                    <div class="text-normal">un proyecto de <a href="https://wizardzines.com">wizard zines</a></div>
                 </h3>
                 <div class="w-full lg:w-0"> </div> <!-- ugly hack to make it wrap ugh ugh -->
                 <div class="mr-4 lg:mb-0 mb-8 font-bold">
-                    <a class="no-underline mx-4" href="/about.html"> About </a>
-                    <a class="no-underline mx-4" href="/dictionary.html">DNS dictionary</a>
+                    <a class="no-underline mx-4" href="/about.html"> Acerca de </a>
+                    <a class="no-underline mx-4" href="/dictionary.html">Diccionario de DNS</a>
                 </div>
             </div>
         </div>
@@ -47,71 +47,72 @@ td {
 </style>
 
     <div style="max-width: 600px" class="m-auto dictionary p-4">
-        <h1 class="text-3xl mt-8 mb-8 text-center"> DNS dictionary</h1>
+        <h1 class="text-3xl mt-8 mb-8 text-center"> Diccionario de DNS</h1>
 
-        <p class="my-4"> Here are a few quick definitions to get you started: </p>
+        <p class="my-4"> Aquí tienes algunas definiciones breves para empezar: </p>
 
         <table>
             <tr>
                 <td class="word">A record</td>
-                <td>A very common type of DNS record. It contains an IPv4 address, like <code>1.2.3.4</code></td>
+                <td>Un tipo de registro DNS muy común. Contiene una dirección IPv4, como <code>1.2.3.4</code>.</td>
             </tr>
             <tr>
-                <td class="word">Authoritative DNS server</td>
+                <td class="word">Servidor DNS autoritativo</td>
                 <td>
-                    This is one type of DNS server. Every domain has an
-                    authoritative DNS server assigned to it.
-                    The way DNS requests generally flow is:
-<pre>you -&gt; DNS resolver -&gt; authoritative
-                         DNS server
+                    Es un tipo de servidor DNS. Cada dominio tiene asignado un
+                    servidor DNS autoritativo.
+                    Por lo general, las solicitudes DNS siguen este recorrido:
+<pre>tú -&gt; resolvedor DNS -&gt; servidor DNS
+                         autoritativo
 </pre>
             </td>
             </tr>
             <tr>
                 <td class="word">CNAME record</td>
                 <td>
-                    A common type of DNS record. It contains an hostname
-                    address, like <code>example.com</code>. <a href="https://wizardzines.com/comics/cname">CNAME records comic</a>.
+                    Un tipo de registro DNS común. Contiene el nombre de host de
+                    un dominio, como <code>example.com</code>. <a href="https://wizardzines.com/comics/cname">Cómic sobre registros CNAME</a>.
                 </td>
             </tr>
             <tr>
                 <td class="word">DNS name</td>
                 <td>
-                    Every time you type a domain, subdomain, or sub-sub-domain into your browser, that's a DNS name!
-                    A DNS name (like <code>bananas.prince.fruit.oops.pie.com.</code>) has to:
+                    Cada vez que escribes un dominio, subdominio o subdominio de
+                    otro nivel en el navegador, ¡es un nombre DNS!
+                    Un nombre DNS (como <code>bananas.prince.fruit.oops.pie.com.</code>) debe:
                     <ul>
-                        <li> be less than 255 characters</li>
-                        <li> each part like ("bananas") needs to be less than 63 characters </li>
-                        <li> theoretically it should be composed of only a-z, A-Z, 0-9, and "-" characters, but it's common for domain names to have underscores in them too</li>
+                        <li> tener menos de 255 caracteres;</li>
+                        <li> cada parte (como «bananas») debe tener menos de 63 caracteres;</li>
+                        <li> en teoría, estar compuesto solo por letras a-z, A-Z, números del 0 al 9 y guiones (-), aunque es común que los nombres de dominio también contengan guiones bajos (_).</li>
                     </ul>
-                    Other than that, DNS queries can contain any DNS name.
+                    Aparte de eso, las consultas DNS pueden contener cualquier nombre DNS.
                 </td>
             </tr>
             <tr>
                 <td class="word">DNS record</td>
                 <td>
-                    When you make a DNS query, you get 0 or more records in response. Every record has at least 4 fields: the <strong>name</strong>, the <strong>TTL</strong>, the <strong>type</strong>, and one or more <strong>content</strong> fields. For example the IP address in an A record is its content.
+                    Al hacer una consulta DNS, recibes cero o más registros como respuesta. Cada registro tiene al menos cuatro campos: el <strong>nombre</strong>, el <strong>TTL</strong>, el <strong>tipo</strong> y uno o más campos de <strong>contenido</strong>. Por ejemplo, la dirección IP de un registro A es su contenido.
                 </td>
             </tr>
             <tr>
                 <td class="word">DNS resolver</td>
-                <td>This is one type of DNS server. A resolver takes your request, sends it to the right authoritative DNS server, and caches the result. You might be using a resolver run by Google, Cloudflare, or your ISP. </td>
+                <td>Es un tipo de servidor DNS. Un resolvedor recibe tu solicitud, la envía al servidor DNS autoritativo correspondiente y guarda en caché el resultado. Puede que uses un resolvedor de Google, Cloudflare o tu proveedor de Internet.</td>
             </tr>
             <tr>
                 <td class="word">DNS query</td>
                 <td>
-                    A DNS query is a request that you send to a DNS server. It contains 2 fields: the name (like example.com), and the type (like "A").
+                    Una consulta DNS es una solicitud que envías a un servidor DNS. Contiene dos campos: el nombre (como example.com) y el tipo (como «A»).
                 </td>
             </tr>
             <tr>
                 <td class="word">Subdomain</td>
                 <td>
-                    See DNS name
+                    Consulta «Nombre DNS».
                 </td>
             </tr>
             <tr>
                 <td class="word">TTL</td>
-                <td>Stands for <strong>Time To Live</strong>.  This is a DNS record field. It's an number of seconds. DNS resolvers use it to decide how long to cache the record.</td>
+                <td>Significa <strong>Time To Live</strong> (tiempo de vida). Es un campo del registro DNS expresado en segundos. Los resolvedores DNS lo usan para decidir cuánto tiempo guardar el registro en caché.</td>
             </tr>
         </table>
     </div>

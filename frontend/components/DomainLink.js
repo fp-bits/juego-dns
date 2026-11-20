@@ -8,7 +8,7 @@ export default {
     >{{subdomain}}.{{ domain }}.messwithdns.com</a
   >
   <span v-else>
-    <span class="text-green-700">your-domain</span>.messwithdns.com
+    <span class="text-green-700">tu-dominio</span>.messwithdns.com
   </span>
 </code>
     `,

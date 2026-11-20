@@ -38,7 +38,7 @@ export const store: Store = reactive({
             },
         });
         if (!response.ok) {
-            alert('Error deleting record');
+            alert('Error al eliminar el registro');
         }
         refreshRecords();
     },
@@ -51,7 +51,7 @@ export const store: Store = reactive({
             },
         });
         if (!response.ok) {
-            alert('Error deleting all records');
+            alert('Error al eliminar todos los registros');
         }
         refreshRecords();
     },
