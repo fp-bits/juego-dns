@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         currDomain: function() {
-            return this.domain || 'your-domain';
+            return this.domain || 'tu-dominio';
         },
     },
 }
