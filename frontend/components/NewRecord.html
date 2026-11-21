@@ -1,15 +1,15 @@
  <form ref="form" @submit.prevent="createOrUpdateRecord($event)">
    <div class="form-record"> <!-- this mr-auto is literally just for screenshots, not layout -->
      <div class="form-field">
-       <label for="subdomain">Name</label>
+       <label for="subdomain">Nombre</label>
        <input id="subdomain" required
-                             oninvalid="this.setCustomValidity('Example: orange');"
+                             oninvalid="this.setCustomValidity('Ejemplo: orange');"
                              onchange="this.setCustomValidity('')"
                              name="subdomain" type="text">
      </div>
 
      <div class="form-field">
-       <label for="type">Type</label>
+       <label for="type">Tipo</label>
        <select id="type" name="type" default="A" type="text"
                required>
          <option v-for="option in getOptions()" :value="option">{{option}}</option>
@@ -19,7 +19,7 @@
      <div class="form-field" v-for="field, i in schemas[form_data.type]">
        <label for="content_{{i}}" class="block">{{field.label}}</label>
        <input id="content_{{i}}" type="text" :required="!field.optional"
-              @invalid="(e) => e.target.setCustomValidity('Example: ' + field.example)"
+              @invalid="(e) => e.target.setCustomValidity('Ejemplo: ' + field.example)"
               onchange="this.setCustomValidity('')"
               :name="'value_' + field.name"
               :style='{width: field.width}'
@@ -50,14 +50,14 @@
     <div v-if="record" class="w-full flex justify-end mt-4 mb-2">
       <button type="button" class="cancel text-center w-auto text-left block my-2 inline hover:bg-gray-40
                     bg-gray-200 py-2 px-4 rounded" @click="cancel()" >
-        Cancel
+        Cancelar
       </button>
 
       <button type="submit"
           class="save block my-2 text-center w-auto text-left mr-4
                  hover:bg-green-700 ml-4 bg-green-500 text-white py-2 px-4
                  rounded">
-        Save
+        Guardar
       </button>
     </div>
 
@@ -66,6 +66,6 @@
           id="create"
           class="ml-auto mt-4 create"
           type="submit"
-          > Create </button>
+          > Crear </button>
     </div>
 </form>

@@ -24,10 +24,10 @@
     <td class="view-edit text-right">
       <div style="min-width: 10rem">
         <button class="delete px-4 text-red-700 hover:text-red-500" @click.prevent="confirmDelete()">
-          Delete
+          Eliminar
         </button>
         <button class="edit hover:text-green-700 text-green-500 font-bold py-2 px-4 rounded" @click="toggle()">
-        Edit
+        Editar
         <span v-if="clicked">
           <svg
             style="transform: rotate(90deg)"
@@ -64,18 +64,18 @@
       <div class="p-2 flex">
           <div class="flex-grow">
               <div>
-                  <strong>Name: </strong>
+                  <strong>Nombre: </strong>
                   <span class="view-name">
                       <a :href="'http://' + record.domain_name" target="_blank"
                           @click="$event.stopPropagation()">{{ record.domain_name }}</a>
                   </span>
               </div>
               <div>
-                  <strong>Type: </strong>
+                  <strong>Tipo: </strong>
                   <span class="view-type">{{ record.type }}</span>
               </div>
               <div style="text-overflow: ellipsis; max-width: 20em; overflow: hidden;">
-                  <strong>Content: </strong>
+                  <strong>Contenido: </strong>
                   <span class="view-content" >{{ record.content }}</span>
               </div>
               <div>
@@ -84,13 +84,13 @@
               </div>
 
               <div class="delete pt-2 text-red-700 hover:text-red-500" @click="confirmDelete()">
-                  Delete
+                  Eliminar
               </div>
           </div>
           <div class="flex flex-col justify-between">
               <div class="view-edit text-left" @click="toggle()">
                   <button class="edit hover:text-green-500 text-base text-green-700 font-bold py-2 px-4 rounded">
-                      Edit
+                      Editar
                   </button>
               </div>
           </div>

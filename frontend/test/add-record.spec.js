@@ -152,21 +152,21 @@ test('subdomain with multiple layers works', async ({ page }) => {
 test('A record error message', async ({ page }) => {
     await setName(page);
     await page.type("[name='A']", 'asdf')
-    await checkError(page, 'Example: 1.2.3.4')
+    await checkError(page, 'Ejemplo: 1.2.3.4')
 })
 
 test('AAAA record error message', async ({ page }) => {
     await setName(page);
     await page.selectOption("[name='type']", 'AAAA')
     await page.type("[name='AAAA']", 'xxx')
-    await checkError(page, 'Example: 2001:db8::1')
+    await checkError(page, 'Ejemplo: 2001:db8::1')
 })
 
 test('CNAME record error message', async ({ page }) => {
     await setName(page);
     await page.selectOption("[name='type']", 'CNAME')
     await page.type("[name='Target']", 'asdf')
-    await checkError(page, 'Example: orange-ip.fly.dev')
+    await checkError(page, 'Ejemplo: orange-ip.fly.dev')
 })
 
 test('ttl error message', async ({ page }) => {
@@ -175,7 +175,7 @@ test('ttl error message', async ({ page }) => {
     const subdomain = 'test-' + randomString();
     await page.type("[name='subdomain']", subdomain);
     await page.type("[name='A']", '1.2.3.4')
-    await checkError(page, 'Example: 60')
+    await checkError(page, 'Ejemplo: 60')
 })
 
 test("name can't be blank", async ({ page }) => {
@@ -183,7 +183,7 @@ test("name can't be blank", async ({ page }) => {
     await page.click('#start-experimenting');
     await page.type("[name='A']", '1.2.3.4')
     await page.type("[name='ttl']", '30')
-    await checkError(page, "Example: bananas")
+    await checkError(page, "Ejemplo: bananas")
 })
 
 test('server error message', async ({ page }) => {

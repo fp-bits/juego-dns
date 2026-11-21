@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -31,73 +31,73 @@ p {
                         mess with dns
                         <span class="star text-xl">★</span>
                     </a>
-                    <div class="text-normal"> a <a href="https://wizardzines.com">wizard zines</a> project</div>
+                    <div class="text-normal">un proyecto de <a href="https://wizardzines.com">Wizard Zines</a></div>
                 </h3>
                 <div class="w-full lg:w-0"> </div> <!-- ugly hack to make it wrap ugh ugh -->
                 <div class="mr-4 lg:mb-0 mb-8 font-bold">
-                    <a class="no-underline mx-4" href="/about.html"> About </a>
-                    <a class="no-underline mx-4" href="/dictionary.html">DNS dictionary</a>
+                    <a class="no-underline mx-4" href="/about.html">Acerca de</a>
+                    <a class="no-underline mx-4" href="/dictionary.html">Diccionario de DNS</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <div style="max-width: 600px" class="m-auto p-4 main">
-        <h1 class="text-3xl mt-8 mb-8 text-center">About</h1>
-        <h2 class="text-2xl mt-8 mb-8">Why did you build this?</h2>
+        <h1 class="text-3xl mt-8 mb-8 text-center">Acerca de</h1>
+        <h2 class="text-2xl mt-8 mb-8">¿Por qué creaste este sitio?</h2>
 
         <p>
-        Well, I was writing a <a href="https://wizardzines.com">zine</a> about DNS. And at the end of
-        many of my zines, I say "the best way to learn is to experiment!  Do
-        weird DNS experiments and see how it works". But I realized that most
-        people, even if they have a domain, probably aren't comfortable doing
-        weird DNS experiments on a domain that's important to
-        them.
+        Estaba escribiendo un <a href="https://wizardzines.com">fanzine</a> sobre DNS. Al final de
+        muchos de mis fanzines digo: «¡La mejor forma de aprender es experimentar!
+        Haz experimentos raros con DNS y mira cómo funciona». Pero me di cuenta de que
+        la mayoría de la gente, incluso quienes tienen un dominio, probablemente no se
+        sienten cómodos haciendo experimentos raros con un dominio importante para ellos.
         </p>
         <p>
-        So I figured I'd create a domain that's just for playing around
-        (<code>messwithdns.com</code>) and let anyone set DNS records on it.
-        You're very encouraged to play around and break things.
+        Así que se me ocurrió crear un dominio para jugar
+        (<code>messwithdns.com</code>) y permitir que cualquiera configure registros DNS.
+        ¡Anímate a experimentar y a romper cosas!
         </p>
 
 
-        <h2 class="text-2xl mt-8 mb-8">FAQ</h2>
+        <h2 class="text-2xl mt-8 mb-8">Preguntas frecuentes</h2>
 
-        <h3>I found a bug!</h3>
+        <h3>¡Encontré un error!</h3>
         <p>
-        I'd love to hear about it! You can report issues with the site <a href="https://github.com/jvns/mess-with-dns/issues">on GitHub</a>.
+        ¡Me encantaría saberlo! Puedes informar de problemas del sitio <a href="https://github.com/jvns/mess-with-dns/issues">en GitHub</a>.
         </p>
 
-        <h3>What's the difference between messwithdns.net and messwithdns.com?</h3>
+        <h3>¿Cuál es la diferencia entre messwithdns.net y messwithdns.com?</h3>
         <p>
-        The <code>.net</code> version is for serving the website, the
-        <code>.com</code> version is where you're allowed to set DNS records.
-        They're separate because it makes the site faster, more secure, and
-        more reliable (I can use a "real" DNS server for messwithdns.net).
+        La versión <code>.net</code> aloja el sitio web y en la versión
+        <code>.com</code> puedes configurar registros DNS. Son dominios distintos
+        para que el sitio sea más rápido, seguro y fiable (puedo usar un servidor
+        DNS «real» para messwithdns.net).
         </p>
 
-        <h3>Does Mess With DNS support setting all DNS record types?</h3>
+        <h3>¿Mess With DNS permite configurar todos los tipos de registros DNS?</h3>
 
         <p>
-        Technically the API does allow setting any DNS record type you want,
-        but I've only built the UI for a few types. In particular I haven't set
-        up DNSSEC yet so there's no UI for setting DNSSEC records.
+        Técnicamente, la API permite configurar cualquier tipo de registro DNS,
+        pero la interfaz solo está disponible para algunos tipos. En particular,
+        todavía no he configurado DNSSEC, así que no hay una interfaz para los
+        registros DNSSEC.
         </p>
 
-        <h3>Can I get any subdomain I want?</h3>
+        <h3>¿Puedo elegir cualquier subdominio?</h3>
         <p>
-        No, you can only get a randomly generated subdomain, like <code>banana17.messwithdns.com</code>.
+        No, solo puedes obtener un subdominio generado al azar, como <code>banana17.messwithdns.com</code>.
         </p>
 
-        <h3>Should I use this for my actual website?</h3>
+        <h3>¿Debería usarlo para mi sitio web real?</h3>
         <p>
-        <strong>No</strong>, your DNS records get deleted after a week. This is to save disk space and to discourage anyone from relying on
-        this for anything real. It's just for learning.
+        <strong>No</strong>, tus registros DNS se eliminan después de una semana. Esto ahorra espacio
+        en disco y evita que alguien dependa del sitio para algo importante. Es solo para aprender.
         </p>
 
-        <h2 class="text-2xl mt-8 mb-8">Credits</h2>
+        <h2 class="text-2xl mt-8 mb-8">Créditos</h2>
         <p>
-        This project was built by <a href="https://jvns.ca">Julia Evans</a> and 
+        Este proyecto fue creado por <a href="https://jvns.ca">Julia Evans</a> y
         <a href="https://marieflanagan.com/">Marie Claire LeBlanc Flanagan</a>.
         </p>
     </div>

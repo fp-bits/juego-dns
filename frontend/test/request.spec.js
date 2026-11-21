@@ -33,7 +33,7 @@ test('empty dns request gets streamed', async ({ page }) => {
     page.on('dialog', dialog => dialog.accept());
     await expect(page.locator('.request-name')).toHaveText(fullName);
     await expect(page.locator('.request-host')).toHaveText('localhost.lan.');
-    await expect(page.locator('.request-response')).toContainText('Code: NXDOMAIN');
+    await expect(page.locator('.request-response')).toContainText('Código: NXDOMAIN');
 });
 
 test('response content is printed', async ({ page }) => {
@@ -46,7 +46,7 @@ test('response content is printed', async ({ page }) => {
     await new Promise(resolve => setTimeout(resolve, 50));
     const fullName = 'bananas.' + name + '.messwithdns.com.';
     await getIp(fullName);
-    await expect(page.locator('.request-response')).toContainText('Content: 1.2.3.4')
+    await expect(page.locator('.request-response')).toContainText('Contenido: 1.2.3.4')
 });
 
 test('clearing requests works', async ({ page }) => {
@@ -55,7 +55,7 @@ test('clearing requests works', async ({ page }) => {
     const subdomain = await getSubdomain(page);
     const fullName = 'bananas.' + subdomain + '.messwithdns.com.'
     await getIp(fullName);
-    await expect(page.locator('.request-response')).toContainText('Code: NXDOMAIN');
+    await expect(page.locator('.request-response')).toContainText('Código: NXDOMAIN');
     page.on('dialog', dialog => dialog.accept());
     await page.click('#clear-requests');
     await page.waitForSelector('.request-response', {state: 'detached'});

@@ -45,13 +45,13 @@ const app = createApp({
     },
 
     clearRecords: async function () {
-      if (confirm("Are you sure you want to delete all records?")) {
+      if (confirm("¿Seguro que quieres eliminar todos los registros?")) {
         await store.deleteAllRecords();
       }
     },
 
     clearRequests: async function () {
-      if (confirm("Are you sure you want to delete all requests?")) {
+      if (confirm("¿Seguro que quieres eliminar todas las solicitudes?")) {
         await store.deleteRequests(this.domain);
       }
     },

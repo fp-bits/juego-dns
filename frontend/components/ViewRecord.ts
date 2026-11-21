@@ -15,7 +15,7 @@ export default {
             this.clicked = !this.clicked;
         },
         confirmDelete: async function() {
-            if (confirm('Are you sure you want to delete this record?')) {
+            if (confirm('¿Seguro que quieres eliminar este registro?')) {
                 await store.deleteRecord(this.id);
             }
         },

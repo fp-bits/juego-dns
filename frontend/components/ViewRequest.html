@@ -5,27 +5,26 @@
             {{ localTime(log.created_at) }}
         </td>
         <td class="lg:px-2 lg:py-4">
-            <strong class="inline lg:hidden">Request:</strong>
+            <strong class="inline lg:hidden">Solicitud:</strong>
             <div class="border-l-4 pl-4 mb-4 border-green-200">
-                Name: <span class="request-name">{{log.request.name}}</span> <br>
-                Type: {{log.request.type}} <br>
-                From: <span class="request-host">{{log.request.src_host}} ({{log.request.src_ip}})</span>
+                Nombre: <span class="request-name">{{log.request.name}}</span> <br>
+                Tipo: {{log.request.type}} <br>
+                Desde: <span class="request-host">{{log.request.src_host}} ({{log.request.src_ip}})</span>
             </div>
         </td>
         <td class="lg:px-2 lg:py-4 request-response align-top">
-            <strong class="inline lg:hidden">Response:<br></strong>  
+            <strong class="inline lg:hidden">Respuesta:<br></strong>
             <div class="border-l-4 pl-4 mb-4 border-gray-200">
-            Code: {{log.response.code}} <br>
+            Código: {{log.response.code}} <br>
             </div>
             <div class="border-l-4 pl-4 mb-4 border-gray-200" v-if="!log.response.records || log.response.records.length == 0">
-                (no records)
+                (sin registros)
             </div>
             <div class="border-l-4 pl-4 mb-4 border-pink-200" v-for="record in log.response.records">
-                Type: {{record.type}} <br>
+                Tipo: {{record.type}} <br>
                 TTL: {{record.ttl}} <br>
-                Content: {{record.content}}
+                Contenido: {{record.content}}
             </div>
         </td>
     </tr>
 </tbody>
-

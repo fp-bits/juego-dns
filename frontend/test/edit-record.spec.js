@@ -56,7 +56,7 @@ test('Save should show an error if IP is invalid', async ({ page }) => {
     })
     await page.type("#records [name='A']", 'asdf')
     await page.click('.save')
-    await expect(page.locator('.formulate-input-error')).toHaveText("Example: 1.2.3.4");
+    await expect(page.locator('.formulate-input-error')).toHaveText("Ejemplo: 1.2.3.4");
     await clearRecords(page)
 });
 });
