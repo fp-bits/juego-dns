@@ -139,4 +139,3 @@ function openWebsocket() {
         ws.close();
     };
 }
-

@@ -11,4 +11,3 @@ test('clicking random subdomain brings us to subdomain page', async ({
     await page.click('#start-experimenting');
     await expect(page.locator('.add-record')).toHaveText('Añadir un registro');
 });
-

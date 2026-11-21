@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,11 +20,11 @@
                         mess with dns
                         <span class="star text-xl">★</span>
                     </a>
-                    <div class="text-normal">un proyecto de <a href="https://wizardzines.com">wizard zines</a></div>
+                    <div class="text-normal">un proyecto de <a href="https://wizardzines.com">Wizard Zines</a></div>
                 </h3>
                 <div class="w-full lg:w-0"> </div> <!-- ugly hack to make it wrap ugh ugh -->
                 <div class="mr-4 lg:mb-0 mb-8 font-bold">
-                    <a class="no-underline mx-4" href="/about.html"> Acerca de </a>
+                    <a class="no-underline mx-4" href="/about.html">Acerca de</a>
                     <a class="no-underline mx-4" href="/dictionary.html">Diccionario de DNS</a>
                 </div>
             </div>
@@ -53,7 +53,7 @@ td {
 
         <table>
             <tr>
-                <td class="word">A record</td>
+                <td class="word">Registro A</td>
                 <td>Un tipo de registro DNS muy común. Contiene una dirección IPv4, como <code>1.2.3.4</code>.</td>
             </tr>
             <tr>
@@ -61,58 +61,57 @@ td {
                 <td>
                     Es un tipo de servidor DNS. Cada dominio tiene asignado un
                     servidor DNS autoritativo.
-                    Por lo general, las solicitudes DNS siguen este recorrido:
+                    En general, las solicitudes DNS siguen este recorrido:
 <pre>tú -&gt; resolvedor DNS -&gt; servidor DNS
-                         autoritativo
+                       autoritativo
 </pre>
             </td>
             </tr>
             <tr>
-                <td class="word">CNAME record</td>
+                <td class="word">Registro CNAME</td>
                 <td>
-                    Un tipo de registro DNS común. Contiene el nombre de host de
-                    un dominio, como <code>example.com</code>. <a href="https://wizardzines.com/comics/cname">Cómic sobre registros CNAME</a>.
+                    Un tipo de registro DNS común. Contiene el nombre de host
+                    de otro dominio, como <code>example.com</code>. <a href="https://wizardzines.com/comics/cname">Cómic sobre registros CNAME</a>.
                 </td>
             </tr>
             <tr>
-                <td class="word">DNS name</td>
+                <td class="word">Nombre DNS</td>
                 <td>
-                    Cada vez que escribes un dominio, subdominio o subdominio de
-                    otro nivel en el navegador, ¡es un nombre DNS!
-                    Un nombre DNS (como <code>bananas.prince.fruit.oops.pie.com.</code>) debe:
+                    Cada vez que escribes un dominio, subdominio o subdominio de otro nivel en el navegador, ¡es un nombre DNS!
+                    Un nombre DNS (como <code>bananas.prince.fruit.oops.pie.com.</code>) debe cumplir lo siguiente:
                     <ul>
                         <li> tener menos de 255 caracteres;</li>
-                        <li> cada parte (como «bananas») debe tener menos de 63 caracteres;</li>
-                        <li> en teoría, estar compuesto solo por letras a-z, A-Z, números del 0 al 9 y guiones (-), aunque es común que los nombres de dominio también contengan guiones bajos (_).</li>
+                        <li> cada parte, como «bananas», debe tener menos de 63 caracteres;</li>
+                        <li> en teoría, estar compuesto solo por letras a-z, A-Z, números del 0 al 9 y guiones («-»), aunque es común que los nombres de dominio también tengan guiones bajos.</li>
                     </ul>
                     Aparte de eso, las consultas DNS pueden contener cualquier nombre DNS.
                 </td>
             </tr>
             <tr>
-                <td class="word">DNS record</td>
+                <td class="word">Registro DNS</td>
                 <td>
-                    Al hacer una consulta DNS, recibes cero o más registros como respuesta. Cada registro tiene al menos cuatro campos: el <strong>nombre</strong>, el <strong>TTL</strong>, el <strong>tipo</strong> y uno o más campos de <strong>contenido</strong>. Por ejemplo, la dirección IP de un registro A es su contenido.
+                    Al hacer una consulta DNS, recibes cero o más registros como respuesta. Cada registro tiene al menos 4 campos: el <strong>nombre</strong>, el <strong>TTL</strong>, el <strong>tipo</strong> y uno o más campos de <strong>contenido</strong>. Por ejemplo, la dirección IP de un registro A es su contenido.
                 </td>
             </tr>
             <tr>
-                <td class="word">DNS resolver</td>
-                <td>Es un tipo de servidor DNS. Un resolvedor recibe tu solicitud, la envía al servidor DNS autoritativo correspondiente y guarda en caché el resultado. Puede que uses un resolvedor de Google, Cloudflare o tu proveedor de Internet.</td>
+                <td class="word">Resolvedor DNS</td>
+                <td>Es un tipo de servidor DNS. Un resolvedor recibe tu solicitud, la envía al servidor DNS autoritativo adecuado y guarda el resultado en caché. Puede que uses un resolvedor de Google, Cloudflare o tu proveedor de Internet.</td>
             </tr>
             <tr>
-                <td class="word">DNS query</td>
+                <td class="word">Consulta DNS</td>
                 <td>
-                    Una consulta DNS es una solicitud que envías a un servidor DNS. Contiene dos campos: el nombre (como example.com) y el tipo (como «A»).
+                    Una consulta DNS es una solicitud que envías a un servidor DNS. Contiene 2 campos: el nombre (como example.com) y el tipo (como «A»).
                 </td>
             </tr>
             <tr>
-                <td class="word">Subdomain</td>
+                <td class="word">Subdominio</td>
                 <td>
                     Consulta «Nombre DNS».
                 </td>
             </tr>
             <tr>
                 <td class="word">TTL</td>
-                <td>Significa <strong>Time To Live</strong> (tiempo de vida). Es un campo del registro DNS expresado en segundos. Los resolvedores DNS lo usan para decidir cuánto tiempo guardar el registro en caché.</td>
+                <td>Significa <strong>Time To Live</strong> (tiempo de vida). Es un campo de un registro DNS que indica una cantidad de segundos. Los resolvedores DNS lo usan para decidir cuánto tiempo guardar el registro en caché.</td>
             </tr>
         </table>
     </div>

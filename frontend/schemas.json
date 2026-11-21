@@ -131,7 +131,7 @@
       "example": "ns1.example.com"
     },
     {
-      "label": "Correo electrónico del responsable",
+      "label": "Correo del responsable",
       "name": "Rname",
       "type": "text",
       "width": "16rem",

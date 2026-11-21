@@ -13,7 +13,7 @@
     </h1>
     <div class="tutorial border-pink-200 pl-4 border-l-4">
         <p>
-            <span class="font-bold">Experimentos guiados:</span> Estos tres experimentos explican algunos conceptos básicos de DNS y cómo funciona el sitio.
+            <span class="font-bold">Experimentos guiados:</span> Estos 3 experimentos explican algunos conceptos básicos de DNS y cómo funciona el sitio.
         </p>
         <details class="experiment">
             <summary>
@@ -24,7 +24,7 @@
             <div class="details-modal">
                 <p>
                     Vamos a crear el registro DNS más básico: un registro A. Para la dirección IP, usaremos una IP (213.188.218.160) que configuré
-                    para este proyecto y que solo muestra una imagen de una naranja.
+                    para este proyecto y que simplemente muestra una imagen de una naranja.
                 </p>
                 <ol>
                     <li>
@@ -38,9 +38,9 @@
                         <img src="/images/orange-a.png">
                         En esta página, los valores de TTL siempre se expresan en segundos.
                     </li>
-                    <li> Haz clic en «Crear». </li>
+                    <li> Pulsa «Crear». </li>
                     <li>
-                        Go to <domain-link :domain='domain' subdomain='orange'> </domain-link>                         en el navegador
+                        Visita <domain-link :domain='domain' subdomain='orange'> </domain-link> en el navegador.
                     </li>
                     <li> ¡Deberías ver un sitio web con una imagen de una naranja! </li>
                 </ol>
@@ -67,9 +67,9 @@
                         </ul>
                         <img src="/images/orange-cname.png">
                     </li>
-                    <li> Haz clic en «Crear». </li>
+                    <li> Pulsa «Crear». </li>
                     <li>
-                        Abre <domain-link :domain='domain' subdomain='fruit'> </domain-link> en el navegador.
+                        Visita <domain-link :domain='domain' subdomain='fruit'> </domain-link> en el navegador.
                     </li>
                     <li> ¡Deberías ver un sitio web con una imagen de una naranja! </li>
                 </ol>
@@ -83,8 +83,8 @@
             </summary>
             <div class="details-modal">
                 <p>
-                    ¡La sección «Solicitudes» al final de esta página te permite ver todas las
-                    solicitudes DNS que se hacen a los subdominios de <code class="text-green-700">{{ domain}}.messwithdns.com</code>!
+                    En la sección «Solicitudes», al final de esta página, puedes ver todas
+                    las solicitudes DNS de los subdominios de <code class="text-green-700">{{ domain}}.messwithdns.com</code>.
                     Veamos el registro CNAME que creamos en el experimento anterior para entender cómo funcionan estos registros.
                 </p>
                 <ol>
@@ -92,12 +92,12 @@
                         <domain-link :domain='domain' subdomain='fruit'> </domain-link>.
                     </li>
                     <li>
-                        Fíjate en el nombre que aparece en «Desde». ¿Lo reconoces?
+                        Mira el nombre que aparece en «Desde». ¿Lo reconoces?
                         Podría ser tu proveedor de Internet o un resolvedor DNS público como
                         Cloudflare o Google.
                     </li>
                     <li>
-                        Fíjate en el tipo de la solicitud y de la respuesta. Verás
+                        Observa el tipo de la solicitud y de la respuesta. Verás
                         que se solicita un registro A, pero el servidor DNS responde
                         con un registro CNAME.
                     </li>
@@ -108,7 +108,7 @@
     <hr class="my-4">
     <div class="weird border-purple-200 pl-4 border-l-4">
         <p>
-            <span class="font-bold">Experimentos raros:</span> ¡En estos cinco experimentos rompemos cosas para divertirnos y aprender!
+            <span class="font-bold">Experimentos curiosos:</span> En estos 5 experimentos rompemos cosas para divertirnos y aprender.
         </p>
         <details class="experiment">
             <summary>
@@ -119,10 +119,10 @@
             <div class="details-modal">
                 <p class="my-4">
                     ¿Sabías que con solo <span clas="font-bold">visitar</span> un
-                    dominio puedes hacer que deje de funcionar? ¡Parece raro, pero es cierto! En este experimento:
+                    dominio puedes hacer que deje de funcionar? ¡Es raro, pero cierto! En este experimento:
                 <ul class="steps">
                     <li>Crearemos un registro DNS para un subdominio y luego lo visitaremos (¡funcionará!).</li>
-                    <li>Visitaremos un subdominio, crearemos su registro DNS y volveremos a visitarlo (¡esto <span class="wont">no</span> funcionará!).</li>
+                    <li>Visitaremos un subdominio, crearemos su registro DNS y volveremos a visitarlo (¡no <span class="wont">funcionará</span>!).</li>
                 </ul>
                 ¡Empecemos!
                 </p>
@@ -138,11 +138,11 @@
                         </ul>
                     </li>
                     <li>
-                        Abre <domain-link subdomain="visit-after" :domain='domain'> </domain-link>
+                        Visita <domain-link subdomain="visit-after" :domain='domain'> </domain-link>
                         en el navegador. Deberías ver el sitio de la naranja: ¡todo funciona!
                     </li>
                     <li>
-                        Ahora abre <domain-link subdomain="visit-before" :domain='domain'> </domain-link>
+                        Ahora visita <domain-link subdomain="visit-before" :domain='domain'> </domain-link>
                         en el navegador. Deberías ver un error como «No se encuentra el servidor»,
                         porque todavía no hemos creado el registro.
                     </li>
@@ -157,7 +157,7 @@
                             <img src="/images/visit-before.png">
                     </li>
                     <li>
-                        Vuelve a abrir <domain-link subdomain="visit-before" :domain='domain'> </domain-link> en el navegador. Deberías ver el mismo error «No se encuentra el servidor». ¡Incluso si fuerzas la recarga de la página!
+                        Vuelve a visitar <domain-link subdomain="visit-before" :domain='domain'> </domain-link> en el navegador. Deberías obtener el mismo error «No se encuentra el servidor», incluso si fuerzas la recarga de la página.
                     </li>
                 </ol>
 
@@ -173,24 +173,24 @@
                     <ul class="explanation-list">
                         <li class="you    "> Creas el registro </li>
                         <li class="browser"> El navegador pregunta: ¿dónde está visit-after.{{domain}}.messwithdns.com? </li>
-                        <li class="server"> El servidor DNS responde: ¡encontrado! </li>
+                        <li class="server"> El servidor DNS responde: ¡correcto! </li>
                     </ul>
                     </p>
 
                     <p>
-                        «visit-before» no funciona por algo que hacen los resolvedores DNS llamado <strong>almacenamiento en caché negativo</strong>: guardan en caché la <strong>ausencia</strong> de un registro.
+                        «visit-before» no funciona por algo que hacen los resolvedores DNS llamado <strong>almacenamiento en caché negativo</strong>, que consiste en guardar en caché la <strong>ausencia</strong> de un registro.
 
                     <ul class="explanation-list">
                         <li class="browser ">Navegador: ¿dónde está visit-before.{{domain}}.messwithdns.com? </li>
                         <li class="server  ">Servidor DNS: ¡no existe! </li>
-                        <li class="resolver action">Resolvedor DNS: «¡Vaya, no existe! Mejor lo guardo en caché». </li>
+                        <li class="resolver action">Resolvedor DNS: «¡Vaya, no existe! Mejor lo guardo en caché» </li>
                         <li class="resolver">Resolvedor DNS: no existe</li>
                         <li class="you">Creas el registro </li>
                         <li class="browser">Solicitud: ¿dónde está visit-before.{{domain}}.messwithdns.com? </li>
-                        <li class="resolver action">Resolvedor DNS: «¡Ya consulté esto! ¡No existe!». </li>
+                        <li class="resolver action">Resolvedor DNS: «¡Ya consulté esto! ¡No existe!» </li>
                         <li class="resolver">Resolvedor DNS: no existe </li>
                         <li class="you">Tú: :( :( :( ¡PERO SÍ EXISTE! </li>
-                        <li class="you">Esperas una hora y vuelves a probar; todo funciona porque la caché caducó. </li>
+                        <li class="you">Esperas 1 hora y vuelves a probar; todo funciona porque la caché caducó </li>
                     </ul>
                     </p>
                 </details>
@@ -202,8 +202,8 @@
                         </span>
                     </summary>
                     <p>
-                    ¡No todos los resolvedores DNS usan el almacenamiento en caché negativo!
-                    Por ejemplo, Cloudflare no lo hace, así que este experimento no funcionará
+                    No todos los resolvedores DNS almacenan respuestas negativas en caché. Por ejemplo,
+                    Cloudflare no lo hace, así que este experimento no funcionará
                     si usas el DNS de Cloudflare.
                     </p>
                 </details>
@@ -219,16 +219,16 @@
             </summary>
             <div class="details-modal">
                 <p>
-                    Configurar un TTL muy largo (por ejemplo, de 10 días) puede ser muy
+                    Configurar un TTL muy largo (por ejemplo, de 10 días) resulta muy
                     incómodo: si quieres hacer un cambio, tendrás que esperar hasta 10
                     días para que se aplique. Vamos a:
                 <ul class="pl-2 md:pl-8 steps">
-                    <li>Crear un registro con un TTL <span class="font-bold">corto</span>, visitar la página en el navegador, cambiar el registro y actualizar la página. ¡Veremos el cambio!</li>
-                    <li>Crear un registro con un TTL <span class="font-bold">largo</span>, visitar la página en el navegador, cambiar el registro y actualizar la página. ¡<span class="wont">No</span> veremos el cambio!</li>
+                    <li>Crear un registro con un TTL <span class="font-bold">corto</span>, visitar la página, cambiar el registro y actualizarla. ¡Veremos el cambio!</li>
+                    <li>Crear un registro con un TTL <span class="font-bold">largo</span>, visitar la página, cambiar el registro y actualizarla. ¡No <span class="wont">veremos</span> el cambio!</li>
                 </ul>
                 </p>
                 <p>
-                    ¡Empecemos con el TTL corto!
+                    Empecemos con el TTL corto.
                 </p>
                 <ol>
                     <li>
@@ -242,22 +242,22 @@
                         <img src="/images/short-ttl.png">
                     </li>
                     <li>
-                        Go to <domain-link subdomain="short-ttl" :domain='domain'> </domain-link>
-                        en el navegador. Deberías ver el sitio web de la naranja.
+                        Visita <domain-link subdomain="short-ttl" :domain='domain'> </domain-link>
+                        en el navegador. Deberías ver el sitio de la naranja.
                     </li>
                     <li>
-                        Haz clic en «Editar» y cambia el registro CNAME para que apunte a <code>purple.jvns.ca</code>.
+                        Pulsa «Editar» y cambia el registro CNAME para que apunte a <code>purple.jvns.ca</code>.
                         <img src="/images/short-purple-ttl.png">
                     </li>
                     <li>
                         <p>
-                            Go to <domain-link subdomain="short-ttl" :domain='domain'> </domain-link>
-                            en el navegador. Puede que tengas que forzar la recarga con
+                            Vuelve a visitar <domain-link subdomain="short-ttl" :domain='domain'> </domain-link>
+                            en el navegador. Puede que tengas que forzar la actualización con
                             Ctrl+Shift-R/Cmd+Shift+R, pero ahora deberías ver el sitio morado.
                             ¡La actualización funcionó!
                         </p>
                         <p>
-                            Ahora veamos qué pasa si configuras un TTL largo.
+                            Ahora veamos qué ocurre al configurar un TTL largo.
                         </p>
                     </li>
                     <li>
@@ -266,23 +266,23 @@
                             <li><strong>Nombre:</strong> long-ttl <br> </li>
                             <li><strong>Tipo:</strong> CNAME <br> </li>
                             <li><strong>Destino:</strong> <code>orange.jvns.ca</code> <br> </li>
-                            <li><strong>TTL: </strong> 3000000 (¡son 30 días! También puedes usar cualquier número bastante grande).</li>
+                            <li><strong>TTL: </strong> 3000000 (¡son 30 días! También puedes usar cualquier número bastante grande)</li>
                         </ul>
                         <img src="/images/long-ttl.png">
                     </li>
                     <li>
-                        Go to <domain-link subdomain="long-ttl" :domain='domain'> </domain-link>
-                        en el navegador. Deberías ver el sitio web de la naranja.
+                        Visita <domain-link subdomain="long-ttl" :domain='domain'> </domain-link>
+                        en el navegador. Deberías ver el sitio de la naranja.
                     </li>
                     <li>
-                        Haz clic en «Editar» y cambia el registro CNAME para que apunte a <code>purple.jvns.ca</code>.
+                        Pulsa «Editar» y cambia el registro CNAME para que apunte a <code>purple.jvns.ca</code>.
                         <img src="/images/long-purple-ttl.png">
                     </li>
                     <li>
-                        Vuelve a abrir <domain-link subdomain="long-ttl" :domain='domain'> </domain-link>
-                        en el navegador. Deberías ver el mismo sitio de la naranja: ¡no cambió nada!
-                        Esto ocurre porque el registro DNS anterior todavía está en caché.
-                        También puede que no aparezcan solicitudes nuevas en la sección «Solicitudes».
+                        Vuelve a visitar <domain-link subdomain="long-ttl" :domain='domain'> </domain-link>
+                        en el navegador. Deberías ver el mismo sitio de la naranja: ¡no ha cambiado!
+                        Esto se debe a que el registro DNS anterior sigue guardado en caché.
+                        También puede que notes que no hay solicitudes nuevas en la sección «Solicitudes».
                     </li>
                 </ol>
 
@@ -295,19 +295,19 @@
                     </summary>
 
                     <p>
-                        Cuando el TTL es de 30 segundos, para la segunda solicitud la
-                        caché ya habrá caducado y recibirás la versión nueva. Esto es lo que ocurre:
+                        Cuando el TTL es de 30 segundos, la segunda vez que haces la solicitud,
+                        la caché ya habrá caducado y recibirás la versión nueva. Este es el proceso detallado:
                     </p>
                     <ul class="explanation-list">
                         <li class="you ">Creas un registro</li>
-                        <li class="browser ">El navegador pregunta: ¿dónde está short-ttl.{{domain}}.messwithdns.com?</li>
+                        <li class="browser ">El navegador pregunta: ¿dónde está short-ttl.{{domain}}.messwithdns.com? </li>
                         <li class="resolver action">El resolvedor no lo tiene en caché, así que lo solicita</li>
                         <li class="server ">El servidor DNS responde: ¡Aquí está la IP! ¡El TTL es de 30 segundos!</li>
                         <li class="resolver action">El resolvedor guarda la IP en caché durante 30 segundos</li>
                         <li class="resolver">El resolvedor responde: ¡Aquí está la IP!</li>
                         <li class="action"> ... pasan 30 segundos </li>
                         <li class="you ">Actualizas el registro</li>
-                        <li class="browser ">El navegador pregunta: ¿dónde está short-ttl.{{domain}}.messwithdns.com?</li>
+                        <li class="browser ">El navegador pregunta: ¿dónde está short-ttl.{{domain}}.messwithdns.com? </li>
                         <li class="resolver action">El resolvedor detecta que la caché caducó y vuelve a solicitarlo</li>
                         <li class="server ">El servidor DNS responde: ¡Aquí está la IP!</li>
                         <li class="resolver action">El resolvedor guarda la IP en caché durante 30 segundos</li>
@@ -315,19 +315,19 @@
                     </ul>
 
                     <p>
-                        Con un TTL muy largo, como 10 días, la caché no caduca enseguida y no puedes recibir el sitio actualizado. Esto es lo que ocurre:
+                        Cuando el TTL es un número grande, como 10 días, la caché no caduca y no puedes recibir el sitio actualizado. Esto es lo que ocurre:
                     </p>
 
                     <ul class="explanation-list">
                         <li class="you ">Creas un registro</li>
-                        <li class="browser ">El navegador pregunta: ¿dónde está long-ttl.{{domain}}.messwithdns.com?</li>
+                        <li class="browser ">El navegador pregunta: ¿dónde está long-ttl.{{domain}}.messwithdns.com? </li>
                         <li class="resolver action">El resolvedor no lo tiene en caché, así que lo solicita</li>
                         <li class="server ">El servidor DNS responde: ¡Aquí está la IP! ¡El TTL es de 10 días!</li>
                         <li class="resolver action">El resolvedor guarda la IP en caché durante 10 días</li>
                         <li class="resolver">El resolvedor responde: ¡Aquí está la IP!</li>
                         <li class="action"> ... pasan 30 segundos </li>
                         <li class="you ">Actualizas el registro</li>
-                        <li class="browser ">El navegador pregunta: ¿dónde está long-ttl.{{domain}}.messwithdns.com?</li>
+                        <li class="browser ">El navegador pregunta: ¿dónde está long-ttl.{{domain}}.messwithdns.com? </li>
                         <li class="resolver">El resolvedor responde: ¡Ya lo tengo en caché! ¡Aquí está la IP!</li>
                     </ul>
                 </details>
@@ -343,8 +343,8 @@
             </summary>
             <div class="details-modal">
                 <p>
-                    ¿Sabías que si apuntas dos dominios distintos a la misma dirección IP
-                    puedes ver páginas web diferentes al visitar cada uno? Vamos a:
+                    ¿Sabías que al apuntar 2 dominios distintos a la misma dirección IP
+                    puedes ver páginas diferentes al visitar cada uno? Vamos a:
                 <ul class="steps">
                     <li>Apuntar tu dominio a la misma IP que <a href="https://example.com">example.com</a>.</li>
                     <li>Obtener un error 404 (distinto de lo que ocurre al visitar example.com).</li>
@@ -353,8 +353,8 @@
                 ¡Empecemos!
                 </p>
                 <ol>
-                    <li> Abre <a href="https://example.com">example.com</a> en el navegador. Fíjate en que no aparece un error 404.</li>
-                    <li> Busca la dirección IP de <code>example.com</code>. Puedes ejecutar <code>dig +short example.com</code> en la terminal o imaginar que ya lo hiciste: la IP es <code>93.184.216.34</code> :). </li>
+                    <li>Visita <a href="https://example.com">example.com</a> en el navegador. Fíjate en que no aparece un error 404.</li>
+                    <li>Busca la dirección IP de <code>example.com</code>. Para ello, ejecuta <code>dig +short example.com</code> en la terminal. También puedes hacer como si lo hubieras ejecutado: la IP es <code>93.184.216.34</code> :).</li>
                     <li>
                         Crea un registro A con estos datos:
                         <ul class="record-expl">
@@ -363,7 +363,7 @@
                             <li><strong>TTL: </strong> el que quieras</li>
                         </ul>
                     </li>
-                    <li> Abre <domain-link :domain='domain' subdomain='bad-ip'> </domain-link> en el navegador. Deberías recibir un error 404 (página no encontrada). </li>
+                    <li>Visita <domain-link :domain='domain' subdomain='bad-ip'> </domain-link> en el navegador. Deberías obtener un error 404 (no encontrado).</li>
                 </ol>
                 <details class="my-4">
                     <summary>
@@ -373,10 +373,9 @@
                     </summary>
                     <div>
                         <p>
-                            Cuando el navegador solicita un sitio web, envía una
-                            cabecera <code>Host</code> con el nombre del dominio que escribiste.
-                            Si el servidor (como Apache/nginx) no reconoce ese nombre, suele
-                            devolver un error 404. Veamos con más detalle cómo funciona.
+                            Cuando el navegador solicita un sitio web, envía una cabecera <code>Host</code>
+                            con el nombre del dominio que escribiste. Si el servidor (como Apache/nginx)
+                            no reconoce ese nombre, suele responder con un error 404. Aquí tienes más detalles.
                         </p>
 
                         <p>
@@ -386,19 +385,19 @@
                             <li class="you">Escribes example.com en el navegador</li>
                             <li class="browser">El navegador pregunta: ¿dónde está example.com?</li>
                             <li class="resolver">El resolvedor responde: 93.184.216.34</li>
-                            <li class="browser">El navegador (a 93.184.216.34): ¡una solicitud HTTP para <code>Host: example.com</code>!</li>
+                            <li class="browser">Navegador (a 93.184.216.34): ¡una solicitud HTTP para <code>Host: example.com</code>!</li>
                             <li class="example">Servidor de example.com: ¡conozco ese sitio! ¡Aquí tienes una respuesta!</li>
                         </ul>
                         <p>
-                            Pero cuando solicitas bad-ip.{{domain}}.messwithdns.com y recibes un 404, ocurre lo siguiente:
+                            Pero cuando solicitas bad-ip.{{domain}}.messwithdns.com y obtienes un 404, esto es lo que ocurre:
                         </p>
                         <ul class="explanation-list">
                             <li class="you">Escribes http://bad-ip.{{domain}}.messwithdns.com en el navegador</li>
                             <li class="browser">El navegador pregunta: ¿dónde está bad-ip.{{domain}}.messwithdns.com?</li>
                             <li class="resolver">El resolvedor responde: 93.184.216.34</li>
                             <li class="action">(¡hasta aquí todo es igual!)</li>
-                            <li class="browser">El navegador (a 93.184.216.34): ¡una solicitud HTTP para <code>Host: bad-ip.{{domain}}.messwithdns.com</code>!</li>
-                            <li class="example">Servidor de example.com: ¡Nunca había oído hablar de ese sitio! ¡404!</li>
+                            <li class="browser">Navegador (a 93.184.216.34): ¡una solicitud HTTP para <code>Host: bad-ip.{{domain}}.messwithdns.com</code>!</li>
+                            <li class="example">Servidor de example.com: ¡Nunca he oído hablar de ese sitio! ¡404!</li>
                         </ul>
                     </div>
                 </details>
@@ -407,14 +406,14 @@
         <details class="experiment">
             <summary>
                 <h3>
-                    4. Convencer a tres servidores DNS de que tu subdominio tiene tres IP distintas (3-ips)
+                    4. Convencer a 3 servidores DNS de que tu subdominio tiene 3 IP distintas (3-ips)
                 </h3>
             </summary>
             <div class="details-modal">
 
                 <p class="my-4">
                     ¿Sabías que distintos resolvedores DNS pueden tener información contradictoria sobre la dirección IP de tu dominio?
-                    Esto normalmente es un problema, pero vamos a provocarlo a propósito para que veas cómo podría ocurrir por accidente.
+                    Normalmente esto es un problema, pero vamos a provocarlo a propósito para que veas cómo podría ocurrir por accidente.
                 </p>
                 <p class="my-4">
                     Vamos a convencer a:
@@ -446,7 +445,7 @@
                         <img src="/images/cname-screenshot-5.png" class="block border border-dashed border-green-700 mb-4 mt-2">
                     </li>
                     <li>
-                        En la terminal, ejecuta:
+                        Ejecuta esto en la terminal:
                         <pre>$ dig +noall +answer @8.8.8.8 3-ips.{{domain}}.messwithdns.com</pre>
                         Ejecútalo 10 veces para asegurarnos. Google tiene muchos servidores DNS, así que queremos consultar la mayoría.
                     </li>
@@ -454,20 +453,20 @@
                         Cambia el registro A para que apunte a <code>20.21.22.23</code>. Mantén el mismo TTL.
                     </li>
                     <li>
-                        Ahora vamos a informar a Cloudflare sobre el dominio. En la terminal, ejecuta:
+                        ¡Es hora de informar a Cloudflare sobre el dominio! Ejecuta esto en la terminal:
                         <pre>$ dig +noall +answer @1.1.1.1 3-ips.{{domain}}.messwithdns.com</pre>
-                        Ejecútalo unas cuantas veces.
+                        Ejecútalo varias veces.
                     </li>
                     <li>
-                        ¡Un último cambio!
+                        ¡Último cambio!
                         Cambia el registro A para que apunte a <code>30.31.32.33</code>. Mantén el mismo TTL.
                     </li>
                     <li>
-                        Ahora informaremos a Quad9 sobre el dominio. En la terminal, ejecuta:
+                        Ahora informaremos a Quad9 sobre el dominio. Ejecuta esto en la terminal:
                         <pre>$ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com</pre>
                     </li>
                     <li>
-                        Preguntemos a los tres proveedores cuál creen que es nuestra dirección IP. Esto es lo que veo:
+                        Ahora preguntemos a los 3 proveedores qué dirección IP creen que tenemos. Esto es lo que veo:
 
                         <pre>
 $ dig +noall +answer @8.8.8.8 3-ips.{{domain}}.messwithdns.com
@@ -477,7 +476,7 @@ $ dig +noall +answer @1.1.1.1 3-ips.{{domain}}.messwithdns.com
 $ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com
 3-ips.ionized-twig.messwithdns.com. 30	IN A	30.31.32.33
 </pre>
-                        ¡Los tres servidores DNS tienen opiniones distintas sobre nuestra dirección IP! Travesura completada.
+                        ¡Los 3 servidores DNS tienen opiniones distintas sobre nuestra dirección IP! Misión cumplida.
 
                     </li>
                 </ol>
@@ -490,10 +489,10 @@ $ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com
                     </summary>
                     <p>
                         Esto funciona porque Google, Cloudflare y Quad9 nunca
-                        buscan nuestro dominio por iniciativa propia: solo lo consultan cuando alguien
-                        hace una solicitud. Y como literalmente eres la única persona del
+                        buscan nuestro dominio de forma proactiva: solo lo consultan cuando alguien
+                        hace una solicitud. Y como eres literalmente la única persona del
                         mundo que ha solicitado 3-ips.{{domain}}.messwithdns.com,
-                        tienes el control total sobre cuándo lo conocen por primera vez.
+                        tienes el control total sobre cuándo conocen el dominio por primera vez.
                     </p>
                 </details>
                 <details>
@@ -503,11 +502,12 @@ $ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com
                         </span>
                     </summary>
                     <p>
-                    8.8.8.8 no es un solo servidor, sino muchos servidores DNS. Probablemente,
-                    cuando consultaste 8.8.8.8 por primera vez, no llegaste a algunos de ellos.
-                    Al final, llegaste a un servidor nuevo que aún no había guardado el registro
-                    en caché. (Por eso se indica que lo consultes 10 veces, aunque a veces
-                    ni siquiera 10 veces son suficientes).
+                    8.8.8.8 no es un solo servidor, sino muchos servidores DNS. Lo
+                    más probable es que, al consultar 8.8.8.8 por primera vez,
+                    no llegaras a algunos de sus servidores. Al final, llegaste a
+                    un servidor nuevo que aún no había guardado el registro en caché.
+                    (Por eso se indica «consultar 10 veces», aunque a veces 10
+                    no sean suficientes).
                     </p>
                 </details>
                 </p>
@@ -517,16 +517,16 @@ $ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com
         <details class="experiment">
             <summary>
                 <h3>
-                    5. Configurar dos registros A contradictorios
+                    5. Configurar dos registros A en conflicto
                 </h3>
             </summary>
             <div class="details-modal">
                 Muchos dominios tienen asociadas varias direcciones IP.
                 Normalmente no lo notas porque ambas direcciones IP sirven exactamente
-                la misma página web. Para ver mejor cómo funciona, usaremos dos IP que sirven sitios completamente distintos.
+                la misma página. Pero podemos ver cómo funciona si usamos dos IP que sirven sitios totalmente distintos.
                 <ul class="steps">
-                    <li>Crea dos registros que apunten a páginas web distintas (una naranja y otra morada).</li>
-                    <li>Usa curl para solicitar el mismo dominio varias veces y observa qué ocurre.</li>
+                    <li>Crea 2 registros que apunten a páginas diferentes (una naranja y otra morada).</li>
+                    <li>Usa curl para solicitar repetidamente el mismo dominio y observa qué ocurre.</li>
                 </ul>
 
                 <ol>
@@ -538,7 +538,7 @@ $ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com
                             <li><strong>TTL:</strong> 5</li>
                         </ul>
                     </li>
-                    <li>Crea otro registro A con estos datos:
+                    <li> Crea otro registro A con estos datos:
                         <ul class="record-expl">
                             <li><strong>Nombre:</strong> conflict <br> </li>
                             <li><strong>Dirección IPv4:</strong> <code>213.188.209.192</code> <br> </li>
@@ -547,10 +547,10 @@ $ dig +noall +answer @9.9.9.9 3-ips.{{domain}}.messwithdns.com
 
                     </li>
                     <li>
-                        En la terminal, ejecuta:
+                        Ejecuta esto en la terminal:
                         <pre>curl http://conflict.{{currDomain()}}.messwithdns.com 2&gt;/dev/null | grep title </pre>
                         10 veces.
-                        Cuando lo ejecuto, el resultado alterna entre «orange» y «purple», como en este ejemplo. Puede que a ti te dé otro resultado; lo explicaremos más adelante :)
+                        Cuando lo ejecuto, el resultado alterna entre «orange» y «purple», como aquí. Puede que tú veas otro comportamiento; lo explicaremos más adelante :).
                         <pre>
 $ curl http://conflict.{{currDomain()}}.messwithdns.com/ 2&gt; /dev/null | grep title
 &lt;title&gt;orange&lt;/title&gt;
@@ -576,28 +576,28 @@ $ curl http://conflict.{{currDomain()}}.messwithdns.com/ 2&gt; /dev/null | grep 
                 <details>
                     <summary>
                         <span class="text-green-700">
-                            ¿Por qué este experimento da resultados distintos a cada persona?
+                            ¿Por qué distintas personas obtienen resultados diferentes en este experimento?
                         </span>
                     </summary>
                     <p>
-                        He visto tres resultados distintos en este experimento. ¿Por qué? Empecemos por pensar qué ocurre cuando ejecutas <code>curl</code>.
+                        He visto 3 resultados diferentes en este experimento. ¿Por qué? Empecemos por pensar qué ocurre cuando ejecutas <code>curl</code>.
                     </p>
                     <ul class="explanation-list">
-                        <li class="you    "> Creas dos registros </li>
+                        <li class="you    "> Creas 2 registros </li>
                         <li class="you"> Ejecutas <code>curl conflict.{{domain}}.messwithdns.com</code></li>
-                        <li class="">curl hace una solicitud DNS</li>
-                        <li class="resolver">El resolvedor encuentra dos registros coincidentes</li>
+                        <li class=""> curl realiza una solicitud DNS </li>
+                        <li class="resolver">El resolvedor encuentra 2 registros coincidentes</li>
                     </ul>
 
-                    Ahora tu resolvedor tiene dos registros y debe decidir en qué orden devolverlos. Puede:
+                    Ahora el resolvedor tiene 2 registros y debe decidir en qué orden devolverlos. Puede:
                     <ul class="normal-list">
                         <li>Devolver los registros en el mismo orden en que los recibió.</li>
                         <li>Cambiar el orden cada vez que recibe una solicitud (¡eso es lo que hace el mío!).</li>
                         <li>Elegir un orden al azar.</li>
-                        <li>¡O quizá hacer algo distinto que no haya mencionado! ¡Quién sabe!</li>
+                        <li>¡Quizá hacer algo más que no haya mencionado! ¡No lo sé!</li>
                     </ul>
 
-                    Entonces curl elegirá el primer registro de la respuesta, que dependerá del orden elegido por el resolvedor.
+                    Luego curl elige el primer registro de la respuesta, que depende del orden elegido por el resolvedor.
 
                 </details>
                 </p>
@@ -609,10 +609,10 @@ $ curl http://conflict.{{currDomain()}}.messwithdns.com/ 2&gt; /dev/null | grep 
     <hr class="my-4">
     <div class="useful border-blue-200 pl-4 border-l-4">
         <p>
-            <span class="font-bold">Experimentos prácticos</span>: Los demás
+            <span class="font-bold">Experimentos prácticos</span>: El resto de los
             experimentos son cosas que quizá quieras hacer en la vida real.
-            Son más un reto que un tutorial: cada uno tiene unas instrucciones breves.
-            ¡Te animamos a probar por tu cuenta! :)
+            Son más bien retos que tutoriales: cada uno tiene un breve resumen.
+            ¡Anímate a explorar por tu cuenta! :)
         </p>
         <details class="experiment">
             <summary>
@@ -622,13 +622,13 @@ $ curl http://conflict.{{currDomain()}}.messwithdns.com/ 2&gt; /dev/null | grep 
             </summary>
             <div class="details-modal">
                 <p>
-                    Puedes usar el servicio que quieras, por ejemplo Netlify, GitHub Pages o GitLab Pages. Estos son los pasos para hacerlo con Netlify:
+                    Puedes usar el servicio que quieras para este experimento, como Netlify, GitHub Pages, GitLab Pages, etc. Estos son los pasos de ejemplo con Netlify:
                 </p>
                 <ol>
                     <li>En Netlify: crea un sitio nuevo.</li>
                     <li>En Netlify: añade el dominio www.{{currDomain()}}.messwithdns.com a tu sitio.</li>
                     <li>En Mess With DNS: crea un registro CNAME que apunte www.{{currDomain()}}.messwithdns.com a tu nuevo sitio de Netlify.</li>
-                    <li>Abre www.{{currDomain()}}.messwithdns.com en el navegador y comprueba si funciona.</li>
+                    <li>Visita www.{{currDomain()}}.messwithdns.com en el navegador y comprueba si funciona.</li>
                 </ol>
                 <p>Los registros DNS se eliminan después de una semana, ¡así que no uses este sitio para nada importante! :) </p>
             </div>
@@ -641,11 +641,11 @@ $ curl http://conflict.{{currDomain()}}.messwithdns.com/ 2&gt; /dev/null | grep 
             </summary>
             <div class="details-modal">
                 <p>
-                    Puedes usar cualquier servicio de correo electrónico que permita usar tu propio dominio. Estos son los pasos para hacerlo con Fastmail (aunque hace mucho que no se prueban y quizá no funcionen):
+                    Puedes usar cualquier servicio de correo que permita utilizar tu propio dominio. Aquí tienes los pasos de ejemplo con Fastmail (aunque hace mucho que no se prueban y quizá no funcionen):
                 </p>
                 <ol>
                     <li>En Fastmail: regístrate para obtener una prueba gratuita con el correo <code>you@mail.{{currDomain()}}.messwithdns.com</code>.</li>
-                    <li>En Mess With DNS: crea dos registros MX que apunten mail.{{currDomain()}}.messwithdns.com a los servidores de correo de Fastmail. Fastmail te dará instrucciones al registrarte.</li>
+                    <li>En Mess With DNS: crea 2 registros MX que apunten mail.{{currDomain()}}.messwithdns.com a los servidores de correo de Fastmail. Fastmail te dará instrucciones al registrarte.</li>
                     <li>Envíate un correo a you@mail.{{currDomain()}}.messwithdns.com y comprueba si lo recibes.</li>
                 </ol>
                 <p>Los registros DNS se eliminan después de una semana, ¡así que no uses esta dirección de correo para nada importante! :) </p>
@@ -654,18 +654,18 @@ $ curl http://conflict.{{currDomain()}}.messwithdns.com/ 2&gt; /dev/null | grep 
         <details class="experiment">
             <summary>
                 <h3>
-                    3. Hacer que los registros SPF y DKIM de tu correo pasen la validación
+                    3. Hacer que pasen los registros SPF y DKIM de tu correo
                 </h3>
             </summary>
             <div class="details-modal">
                 <p>
-                    El objetivo es crear registros SPF y DKIM para que quienes reciban tus correos reconozcan que provienen de tu dominio.
+                    El objetivo es crear registros SPF y DKIM para que los destinatarios reconozcan que tu correo procede de tu dominio.
                 </p>
                 <ol>
-                    <li>Primero configura una cuenta de correo electrónico, como se explica en el experimento 2.</li>
-                    <li>Prueba tus registros SPF siguiendo las instrucciones de la página <a href="https://www.appmaildev.com/en/spf">Prueba de SPF</a>.</li>
+                    <li>Primero tienes que configurar una cuenta de correo, como se describe en el experimento 2.</li>
+                    <li>Prueba tus registros SPF siguiendo las instrucciones de esta página de <a href="https://www.appmaildev.com/en/spf">prueba de SPF</a>.</li>
                     <li>En Fastmail: sigue sus instrucciones para configurar SPF y DKIM.</li>
-                    <li>Vuelve a probar tus registros SPF y comprueba que funcionen. La página <a href="https://www.appmaildev.com/en/spf">Prueba de SPF</a> explica cómo hacerlo.</li>
+                    <li>Vuelve a probar tus registros SPF y comprueba que funcionan. La página de <a href="https://www.appmaildev.com/en/spf">prueba de SPF</a> explica cómo hacerlo.</li>
                 </ol>
             </div>
         </details>
